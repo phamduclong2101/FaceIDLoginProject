@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Login with Webcam";
+}
+
+<h2>Login</h2>
+<form method="post" enctype="multipart/form-data" id="loginForm">
+    <video id="webcam" autoplay playsinline width="320" height="240"></video>
+    <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+    <br />
+    <button type="button" id="capture">Capture Photo</button>
+    <button type="submit" id="upload">Login</button>
+</form>
+
+<script src="/js/webcam.js"></script>
+<script>
+    setupWebcam('/Authentication/Login', 'loginForm');
+</script>
+
